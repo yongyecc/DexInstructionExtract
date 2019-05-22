@@ -81,7 +81,7 @@ public class Utils {
 	 * @param dexFileStream	dex文件的字节流
 	 * @param className	需要置空内部方法的类
 	 */
-	public static void extraInstructions(byte[] dexFileStream, String className) {
+	public static void extraInstructions(byte[] dexFileStream) {
 		//遍历class段
 		parseDexHeader(dexFileStream);
 		parseStringIds(dexFileStream);

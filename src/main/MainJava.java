@@ -8,12 +8,12 @@ public class MainJava {
 		/**
 		 * 需要删除的临时变量
 		 */
-		String fp = "C:\\Users\\xiongchaochao\\Desktop\\classes.dex";
-//		if(args.length < 1) {
-//			System.out.printf("\n\tjava -jar readdex.jar <dex file>\n");
-//			System.exit(0);
-//		}
-//		String fp = args[0];
+
+		if(args.length < 1) {
+			System.out.printf("\n\tjava -jar readdex.jar <dex file>\n");
+			System.exit(0);
+		}
+		String fp = args[0];
 		int ftype;
 		ftype = Utils.getFileType(fp);
 		switch (ftype) {
@@ -24,7 +24,7 @@ public class MainJava {
 		//file type：dex
 		case 1:
 			byte[] bt = Utils.getData(fp);
-			Utils.extraInstructions(bt, "a");
+			Utils.extraInstructions(bt);
 			break;
 		default:
 			
