@@ -1,3 +1,3 @@
-# Ê¹ÓÃ
+# ç”¨æ³•Usage
 
 `java -jar instructextract.jar <dex file>`
